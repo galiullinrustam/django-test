@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+
+    <p>{{ book.title }}</p>
+    <p>{{ book.author }}</p>
+<p>{{ smile }}</p>
+    <a href="{% url 'index' %}">BACK</a>
+    <a href="{% url 'delete' book.pk %}">DELETE</a>
+    <a href="{% url 'update' book.pk %}">UPDATE</a>
+</form>
+{% endblock %}

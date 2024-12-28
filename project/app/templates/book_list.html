@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{% url 'create' %}">CREATE</a>
+<h1>All Books</h1>
+<ul>
+
+{% for book in books %}
+<li> {{ book.full_name }}
+    <a href="{% url 'detail' book.pk %}">READ MORE</a>
+</li>
+    <hr>
+{% endfor %}
+</ul>
+{% endblock %}
